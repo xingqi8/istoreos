@@ -1,0 +1,7 @@
+config NET_REALTEK_PCI_RTL8723BE
+        tristate "Realtek RTL8723be switch support"
+        depends on PCI_SUPPORT && MAC80211
+        select NET_REALTEK_PCI
+        help
+          This driver adds support for Realtek RTL8723be PCI wireless drivers switching.
+
