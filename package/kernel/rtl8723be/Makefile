@@ -8,15 +8,15 @@ PKG_RELEASE:=1
 include $(INCLUDE_DIR)/package.mk
 
 define KernelPackage/rtl8723be
-  SUBMENU:=Wireless Drivers
-  TITLE:=Realtek RTL8723BE wireless drivers
-  DEPENDS:=@(PCI_SUPPORT) +kmod-mac80211 +@DRIVER_11N_SUPPORT
-  FILES:=$(PKG_BUILD_DIR)/rtl8723be.ko
-  AUTOLOAD:=$(call AutoProbe,rtl8723be)
+        SUBMENU:=Wireless Drivers
+        TITLE:=Realtek RTL8723BE wireless drivers
+        DEPENDS:=@(PCI_SUPPORT) +kmod-mac80211 +@DRIVER_11N_SUPPORT
+        FILES:=$(PKG_BUILD_DIR)/rtl8723be.ko
+        AUTOLOAD:=$(call AutoProbe,rtl8723be)
 endef
 
 define KernelPackage/rtl8723be/description
-  Kernel module for Realtek RTL8723BE wireless drivers
+        Kernel module for Realtek RTL8723BE wireless drivers
 endef
 
 EXTRA_KCONFIG:= \
@@ -44,4 +44,4 @@ define Build/Compile
                 modules
 endef
 
-$(eval $(call KernelPackage,rtl8723be))
+$(eval	$(call	KernelPackage,rtl8723be))
